@@ -133,7 +133,7 @@ h2.light-serif { color: #fff; }
   transition: background 0.4s var(--ease), padding 0.4s var(--ease), box-shadow 0.4s;
 }
 .site-header.scrolled {
-  background: rgba(5, 11, 24, 0.92);
+  background: rgba(26,40,69, 0.92);
   backdrop-filter: blur(12px);
   padding: 12px 0;
   box-shadow: 0 10px 30px -20px rgba(0,0,0,0.8);
@@ -207,8 +207,8 @@ h2.light-serif { color: #fff; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(105deg, rgba(5,11,24,0.96) 0%, rgba(5,11,24,0.82) 38%, rgba(5,11,24,0.35) 62%, rgba(5,11,24,0.55) 100%),
-    linear-gradient(to top, rgba(5,11,24,0.95) 0%, rgba(5,11,24,0) 45%);
+    linear-gradient(105deg, rgba(26,40,69,0.96) 0%, rgba(26,40,69,0.82) 38%, rgba(26,40,69,0.35) 62%, rgba(26,40,69,0.55) 100%),
+    linear-gradient(to top, rgba(26,40,69,0.95) 0%, rgba(26,40,69,0) 45%);
 }
 .hero-grid {
   position: relative;
@@ -265,7 +265,7 @@ h2.light-serif { color: #fff; }
   position: relative;
   z-index: 2;
   border-top: 1px solid rgba(255,255,255,0.12);
-  background: rgba(5,11,24,0.4);
+  background: rgba(26,40,69,0.4);
   backdrop-filter: blur(4px);
 }
 .hero-stats-inner {
@@ -323,7 +323,7 @@ h2.light-serif { color: #fff; }
 .amenity::after {
   content: '';
   position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(to top, rgba(5,11,24,0.9) 0%, rgba(5,11,24,0.35) 55%, rgba(5,11,24,0.15) 100%);
+  background: linear-gradient(to top, rgba(26,40,69,0.9) 0%, rgba(26,40,69,0.35) 55%, rgba(26,40,69,0.15) 100%);
 }
 .amenity:hover::before { transform: scale(1.07); }
 .amenity-lg { grid-column: span 3; min-height: 340px; }
@@ -631,7 +631,7 @@ h2.light-serif { color: #fff; }
 .development::after {
   content: '';
   position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(to top, rgba(5,11,24,0.92) 0%, rgba(5,11,24,0.3) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(26,40,69,0.92) 0%, rgba(26,40,69,0.3) 60%, transparent 100%);
 }
 .development:hover::before { transform: scale(1.08); }
 .development-body { padding: 26px; color: #fff; }
@@ -721,7 +721,7 @@ h2.light-serif { color: #fff; }
     flex-direction: column;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: rgba(5,11,24,0.98);
+    background: rgba(26,40,69,0.98);
     backdrop-filter: blur(12px);
     padding: 20px 20px 28px;
     gap: 4px;
