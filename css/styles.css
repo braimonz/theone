@@ -1,19 +1,19 @@
 /* =========================================================
    The One Guadalupe Inn — Rediseño premium
-   Paleta: Navy profundo + Dorado + Blanco/azul claro
+   Paleta de marca: Navy #1A2845 + Azul #0580C3 + Azul claro #4DAADF + Blanco
    ========================================================= */
 
 :root {
-  --navy-900: #050b18;
-  --navy-800: #0a1428;
-  --navy-700: #0e1c3a;
-  --navy-600: #14264d;
-  --gold: #c9a15c;
-  --gold-light: #e0c288;
-  --gold-dark: #a9843f;
-  --blue: #2e5aac;
-  --blue-dark: #1e4b8f;
-  --ink: #0f1b3d;
+  --navy-900: #0e1626;
+  --navy-800: #1a2845;
+  --navy-700: #24345a;
+  --navy-600: #2f4372;
+  --brand: #0580c3;
+  --brand-light: #4daadf;
+  --brand-dark: #045f92;
+  --blue: #0580c3;
+  --blue-dark: #045f92;
+  --ink: #1a2845;
   --muted: #5b6784;
   --line: #e5eaf2;
   --bg-light: #f4f7fb;
@@ -49,7 +49,7 @@ ul { list-style: none; }
 
 .container { width: min(100% - 40px, var(--container)); margin-inline: auto; }
 .center { text-align: center; }
-.gold { color: var(--gold); }
+.gold { color: var(--brand); }
 .serif { font-family: var(--font-serif); }
 
 /* ---------- Botones ---------- */
@@ -73,28 +73,28 @@ ul { list-style: none; }
 .btn-block { width: 100%; justify-content: center; }
 
 .btn-gold {
-  background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
-  color: var(--navy-900);
-  box-shadow: 0 12px 28px -14px rgba(201, 161, 92, 0.8);
+  background: linear-gradient(135deg, var(--brand-light), var(--brand) 55%, var(--brand-dark));
+  color: #fff;
+  box-shadow: 0 12px 28px -14px rgba(5, 128, 205, 0.8);
 }
-.btn-gold:hover { box-shadow: 0 18px 36px -14px rgba(201, 161, 92, 0.9); }
+.btn-gold:hover { box-shadow: 0 18px 36px -14px rgba(5, 128, 205, 0.9); }
 
 .btn-navy { background: var(--navy-800); color: #fff; }
 .btn-navy:hover { background: var(--navy-700); }
 
 .btn-outline-light { border-color: rgba(255, 255, 255, 0.35); color: #fff; }
-.btn-outline-light:hover { border-color: var(--gold); color: var(--gold); }
+.btn-outline-light:hover { border-color: var(--brand); color: var(--brand); }
 
 .btn-outline-navy { border-color: var(--line); color: var(--ink); background: transparent; }
 .btn-outline-navy:hover { border-color: var(--navy-800); }
 
 .btn-ghost-gold {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--brand-light);
+  color: var(--brand-light);
   background: transparent;
   padding: 12px 22px;
 }
-.btn-ghost-gold:hover { background: var(--gold); color: var(--navy-900); }
+.btn-ghost-gold:hover { background: var(--brand-light); color: var(--navy-900); }
 
 /* ---------- Tipografía de secciones ---------- */
 .section { padding: 96px 0; }
@@ -107,7 +107,7 @@ ul { list-style: none; }
   margin-bottom: 16px;
 }
 .eyebrow.blue { color: var(--blue); }
-.eyebrow.gold { color: var(--gold); }
+.eyebrow.gold { color: var(--brand); }
 
 .section-head { max-width: 720px; margin: 0 auto 56px; }
 .section-head.center { text-align: center; }
@@ -143,7 +143,7 @@ h2.light-serif { color: #fff; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; color: #fff; }
 .brand-text strong { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.06em; }
-.brand-text em { font-style: normal; font-size: 0.62rem; letter-spacing: 0.34em; color: var(--gold); margin-top: 3px; }
+.brand-text em { font-style: normal; font-size: 0.62rem; letter-spacing: 0.34em; color: var(--brand-light); margin-top: 3px; }
 
 .main-nav { display: flex; gap: 34px; }
 .main-nav a {
@@ -158,7 +158,7 @@ h2.light-serif { color: #fff; }
   position: absolute;
   left: 0; bottom: -2px;
   width: 0; height: 2px;
-  background: var(--gold);
+  background: var(--brand);
   transition: width 0.3s var(--ease);
 }
 .main-nav a:hover { color: #fff; }
@@ -254,9 +254,9 @@ h2.light-serif { color: #fff; }
   flex-shrink: 0;
   width: 46px; height: 46px;
   display: grid; place-items: center;
-  border: 1px solid rgba(201,161,92,0.4);
+  border: 1px solid rgba(77,180,233,0.4);
   border-radius: 12px;
-  background: rgba(201,161,92,0.08);
+  background: rgba(77,180,233,0.08);
 }
 .hero-highlights h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
 .hero-highlights p { font-size: 0.9rem; color: rgba(255,255,255,0.68); line-height: 1.45; }
@@ -279,7 +279,7 @@ h2.light-serif { color: #fff; }
 .stat-ic {
   width: 52px; height: 52px;
   display: grid; place-items: center;
-  border: 1px solid rgba(201,161,92,0.35);
+  border: 1px solid rgba(77,180,233,0.35);
   border-radius: 12px;
 }
 .stat strong { display: block; font-size: 1.9rem; font-weight: 700; line-height: 1; }
@@ -332,7 +332,7 @@ h2.light-serif { color: #fff; }
   top: 24px; left: 24px;
   width: 52px; height: 52px;
   display: grid; place-items: center;
-  background: rgba(46,90,172,0.85);
+  background: rgba(5,128,205,0.85);
   border-radius: 50%;
   backdrop-filter: blur(2px);
 }
@@ -374,7 +374,7 @@ h2.light-serif { color: #fff; }
    TIPOLOGÍAS  (2 columnas, fondo navy)
    ========================================================= */
 .typologies {
-  background: radial-gradient(1200px 600px at 80% -10%, rgba(46,90,172,0.25), transparent), var(--navy-800);
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(5,128,205,0.25), transparent), var(--navy-800);
   color: #fff;
 }
 .typologies-grid {
@@ -391,7 +391,7 @@ h2.light-serif { color: #fff; }
   overflow: hidden;
   transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s;
 }
-.typology:hover { transform: translateY(-4px); border-color: rgba(201,161,92,0.5); box-shadow: 0 30px 50px -30px rgba(0,0,0,0.7); }
+.typology:hover { transform: translateY(-4px); border-color: rgba(77,180,233,0.5); box-shadow: 0 30px 50px -30px rgba(0,0,0,0.7); }
 .typology-media {
   position: relative;
   flex: 0 0 40%;
@@ -411,13 +411,13 @@ h2.light-serif { color: #fff; }
   position: absolute;
   top: 14px; left: 14px;
   z-index: 2;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
-  color: var(--navy-900);
+  background: linear-gradient(135deg, var(--brand-light), var(--brand-dark));
+  color: #fff;
   font-weight: 700;
   font-size: 0.82rem;
   padding: 7px 14px;
   border-radius: 30px;
-  box-shadow: 0 8px 18px -8px rgba(201,161,92,0.8);
+  box-shadow: 0 8px 18px -8px rgba(77,180,233,0.8);
 }
 .typology-info { flex: 1; padding: 24px; display: flex; flex-direction: column; }
 .typology-info h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; }
@@ -430,7 +430,7 @@ h2.light-serif { color: #fff; }
 }
 .typology-specs li { flex: 1; text-align: center; }
 .typology-specs span { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
-.typology-specs strong { font-size: 1.05rem; color: var(--gold); }
+.typology-specs strong { font-size: 1.05rem; color: var(--brand); }
 .typology-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -447,12 +447,12 @@ h2.light-serif { color: #fff; }
   content: '';
   position: absolute; left: 0; top: 8px;
   width: 6px; height: 6px;
-  background: var(--gold);
+  background: var(--brand);
   border-radius: 50%;
 }
 .typology-actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
 .typology-actions .btn-outline-navy { border-color: rgba(255,255,255,0.25); color: #fff; }
-.typology-actions .btn-outline-navy:hover { border-color: var(--gold); color: var(--gold); }
+.typology-actions .btn-outline-navy:hover { border-color: var(--brand); color: var(--brand); }
 
 /* =========================================================
    VENTAJAS
@@ -471,13 +471,13 @@ h2.light-serif { color: #fff; }
   padding: 32px 28px;
   transition: transform 0.4s var(--ease), border-color 0.4s, background 0.4s;
 }
-.advantage:hover { transform: translateY(-4px); border-color: rgba(201,161,92,0.4); background: rgba(255,255,255,0.06); }
+.advantage:hover { transform: translateY(-4px); border-color: rgba(77,180,233,0.4); background: rgba(255,255,255,0.06); }
 .adv-ic {
   width: 58px; height: 58px;
   display: grid; place-items: center;
   border-radius: 14px;
-  background: rgba(201,161,92,0.1);
-  border: 1px solid rgba(201,161,92,0.3);
+  background: rgba(77,180,233,0.1);
+  border: 1px solid rgba(77,180,233,0.3);
   margin-bottom: 20px;
 }
 .advantage h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
@@ -500,7 +500,7 @@ h2.light-serif { color: #fff; }
   cursor: pointer;
   transition: 0.3s var(--ease);
 }
-.chip:hover { border-color: var(--gold); color: var(--ink); }
+.chip:hover { border-color: var(--brand); color: var(--ink); }
 .chip.is-active { background: var(--navy-800); color: #fff; border-color: var(--navy-800); }
 
 .gallery-grid {
@@ -544,7 +544,7 @@ h2.light-serif { color: #fff; }
 .poi-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; color: var(--ink); }
 .poi-card ul { display: flex; flex-direction: column; gap: 8px; }
 .poi-card li { position: relative; padding-left: 16px; color: var(--muted); font-size: 0.92rem; }
-.poi-card li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.poi-card li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
 
 /* =========================================================
    UBICACIÓN
@@ -563,7 +563,7 @@ h2.light-serif { color: #fff; }
    CONTACTO
    ========================================================= */
 .contact {
-  background: radial-gradient(900px 500px at 15% 10%, rgba(46,90,172,0.25), transparent), var(--navy-800);
+  background: radial-gradient(900px 500px at 15% 10%, rgba(5,128,205,0.25), transparent), var(--navy-800);
   color: #fff;
 }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
@@ -594,9 +594,9 @@ h2.light-serif { color: #fff; }
 }
 .field input:focus, .field textarea:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--brand);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(201,161,92,0.15);
+  box-shadow: 0 0 0 3px rgba(77,180,233,0.15);
 }
 .field textarea { resize: vertical; }
 .form-note { margin-top: 14px; font-size: 0.9rem; text-align: center; min-height: 1.2em; }
@@ -637,7 +637,7 @@ h2.light-serif { color: #fff; }
 .development-body { padding: 26px; color: #fff; }
 .development-body h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; margin-bottom: 4px; }
 .development-body > p { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 12px; }
-.dev-link { color: var(--gold); font-weight: 600; font-size: 0.88rem; display: inline-flex; gap: 6px; transition: gap 0.3s var(--ease); }
+.dev-link { color: var(--brand); font-weight: 600; font-size: 0.88rem; display: inline-flex; gap: 6px; transition: gap 0.3s var(--ease); }
 .dev-link:hover { gap: 12px; }
 
 /* =========================================================
@@ -650,7 +650,7 @@ h2.light-serif { color: #fff; }
 .footer-nav h4, .footer-contact h4 { color: #fff; font-size: 0.95rem; letter-spacing: 0.05em; margin-bottom: 18px; }
 .footer-nav { display: flex; flex-direction: column; gap: 10px; }
 .footer-nav a { font-size: 0.92rem; transition: color 0.3s; }
-.footer-nav a:hover { color: var(--gold); }
+.footer-nav a:hover { color: var(--brand); }
 .footer-contact p { font-size: 0.92rem; margin-bottom: 10px; }
 .footer-social { display: flex; gap: 12px; margin-top: 18px; }
 .footer-social a {
@@ -661,7 +661,7 @@ h2.light-serif { color: #fff; }
   color: rgba(255,255,255,0.8);
   transition: 0.3s var(--ease);
 }
-.footer-social a:hover { background: var(--gold); border-color: var(--gold); color: var(--navy-900); }
+.footer-social a:hover { background: var(--brand); border-color: var(--brand); color: var(--navy-900); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 22px 0; }
 .footer-bottom .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
@@ -758,3 +758,10 @@ h2.light-serif { color: #fff; }
   .typology-media { flex-basis: auto; }
   .typology { flex-direction: column; }
 }
+
+/* --- Acentos en azul claro sobre fondos navy (mejor contraste) --- */
+.hero .eyebrow.gold, .hero .gold,
+.typologies .eyebrow.gold, .typologies .gold,
+.advantages .eyebrow.gold, .advantages .gold,
+.contact .eyebrow.gold, .contact .gold,
+.site-footer .gold { color: var(--brand-light); }
