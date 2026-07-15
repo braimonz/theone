@@ -82,6 +82,9 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 700; }
 .btn-navy { background: var(--navy-800); color: #fff; }
 .btn-navy:hover { background: var(--navy-700); }
 
+.btn-outline-navy { border-color: var(--line); color: var(--ink); background: transparent; }
+.btn-outline-navy:hover { border-color: var(--navy-800); background: #fff; }
+
 .btn-white { background: #fff; color: var(--brand); }
 .btn-white:hover { background: #eef4fb; }
 
@@ -279,6 +282,95 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 700; }
 .stat-address span { text-transform: none; letter-spacing: 0.01em; }
 
 /* =========================================================
+   FRANJA DE MARCA (bajo el hero)
+   ========================================================= */
+.brandstrip {
+  position: relative;
+  background: linear-gradient(90deg, #eef2f7 0%, #f4f7fb 100%);
+  overflow: hidden;
+  isolation: isolate;
+}
+.bs-photo {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 30%;
+  z-index: -1;
+  background-color: var(--navy-700);
+  background-image: var(--img), linear-gradient(135deg, var(--navy-600), var(--navy-800));
+  background-size: cover, cover;
+  background-position: center, center;
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+}
+.bs-inner {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  padding: 40px 20px;
+  padding-right: 27%;
+  min-height: 270px;
+}
+.bs-brand { flex: 0 0 36%; }
+.bs-brand .eyebrow { margin-bottom: 12px; }
+.bs-name { line-height: 1; margin-bottom: 4px; }
+.bs-the-one {
+  display: block;
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--navy-800);
+}
+.bs-sub {
+  display: block;
+  font-size: clamp(1.05rem, 1.9vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--brand-light);
+  margin-top: 6px;
+  white-space: nowrap;
+}
+.bs-divider { display: flex; align-items: center; gap: 8px; margin: 16px 0; max-width: 180px; }
+.bs-divider span { height: 1px; flex: 1; background: var(--brand-light); opacity: 0.5; }
+.bs-desc { color: var(--muted); font-size: 0.98rem; max-width: 34ch; }
+
+.bs-mid { flex: 1; display: flex; flex-direction: column; gap: 24px; }
+.bs-features { display: flex; gap: 5%; justify-content: flex-start; }
+.bs-features li { text-align: center; width: 92px; }
+.bs-features li svg { margin-bottom: 8px; }
+.bs-features li span {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--navy-800);
+}
+.bs-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.bs-btn { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+
+@media (max-width: 1080px) {
+  .bs-brand { flex-basis: 34%; }
+  .bs-photo { width: 34%; }
+  .bs-features { gap: 3%; }
+}
+@media (max-width: 900px) {
+  .bs-photo {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    clip-path: none;
+  }
+  .bs-inner { flex-direction: column; align-items: stretch; gap: 26px; padding: 28px 20px 40px; min-height: 0; }
+  .bs-brand { flex: none; }
+  .bs-mid { gap: 22px; }
+  .bs-features { justify-content: space-between; gap: 10px; }
+  .bs-features li { width: auto; flex: 1; }
+}
+@media (max-width: 480px) {
+  .bs-features { flex-wrap: wrap; }
+  .bs-features li { flex: 1 1 40%; }
+  .bs-actions .bs-btn { flex: 1; }
+}
+
+/* =========================================================
    CONTACTO (marca + formulario)
    ========================================================= */
 .contact { background: var(--bg-light); }
@@ -474,7 +566,7 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 700; }
 .typology-specs li { flex: 1; text-align: center; }
 .typology-specs span { display: block; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.72); margin-bottom: 4px; }
 .typology-specs strong { font-size: 1.02rem; font-weight: 700; }
-.typology-features { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin-bottom: 22px; }
+.typology-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin-bottom: 22px; }
 .typology-features li { position: relative; padding-left: 18px; font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.92); }
 .typology-features li::before {
   content: '';
@@ -483,6 +575,9 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 700; }
   background: #fff;
   border-radius: 50%;
 }
+.typology-features li.has-icon { display: flex; align-items: center; gap: 8px; padding-left: 0; }
+.typology-features li.has-icon::before { display: none; }
+.typology-features li.has-icon svg { flex-shrink: 0; opacity: 0.95; }
 .typology-actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
 
 .typology-wide { grid-column: 1 / -1; }
